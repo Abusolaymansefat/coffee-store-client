@@ -1,11 +1,21 @@
-import React from 'react';
+import React from "react";
+import { useLoaderData } from "react-router";
+import CoffeeCard from "./CoffeeCard";
 
 const Home = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  const coffees = useLoaderData();
+  console.log(coffees);
+  return (
+    <div className="text-center space-y-4">
+      <h1 className="text-2xl">Our Popular Products</h1>
+      <p>Add Coffee</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {coffees.map((coffee) => (
+          <CoffeeCard key={coffee._id} coffee={coffee}></CoffeeCard>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Home;
