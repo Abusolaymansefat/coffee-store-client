@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import Swal from "sweetalert2";
 
 const CoffeeCard = ({ coffee }) => {
-  const { _id, Photo, Price, name, quantity } = coffee;
+  const { _id, Photo, price, name, quantity } = coffee;
   const handleDelete = (_id) => {
     console.log(_id);
     Swal.fire({
@@ -43,7 +43,7 @@ const CoffeeCard = ({ coffee }) => {
         <div>
           <h2 className="">Name: {name}</h2>
           <p> Quantity: {quantity}</p>
-          <p>Price: {Price} taka</p>
+          <p>Price: {price} taka</p>
         </div>
         <div className="card-actions justify-end">
           <div className="join join-vertical space-y-2">
