@@ -8,6 +8,8 @@ import Home from "./components/Home.jsx";
 import AddCoffee from "./components/AddCoffee.jsx";
 import UpdateCoffee from "./components/UpdateCoffee.jsx";
 import CoffeeDetails from "./components/CoffeeDetails.jsx";
+import SignIn from "./components/SignIn.jsx";
+import SingUp from "./components/SingUp.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,14 @@ const router = createBrowserRouter([
         
         Component: UpdateCoffee,
       },
+      {
+        path: 'signin',
+        Component: SignIn
+      },
+      {
+        path: 'singup',
+        Component: SingUp
+      }
     ],
   },
 ]);
