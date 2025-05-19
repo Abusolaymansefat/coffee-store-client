@@ -39,7 +39,7 @@ const router = createBrowserRouter([
         Component: UpdateCoffee,
       },
       {
-        path: "signin",
+        path: "singin",
         Component: SignIn,
       },
       {
